@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <!-- Bootstrap version3 used -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+<!-- container for title image -->
+
+    <div class="container">
+        <div class="row">
+            <div class=" col-sm-12 col-md-12 col-lg-12  headimg">
+                <img class="img-responsive" src="../images/Meme.jpg" alt="meme">
+                <img class="img-responsive" src="../images/Generator.jpg" alt="generator">
+            </div>
+        </div>
+    </div>
+
+    <!-- conatiner for getting input from user -->
+    <div class="container uploadimage">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 ">
+
+                <form id="image-upload-form" class="image-upload-form" action="/action_page.php">
+
+                    
+
+                    <div class="form-group ">
+                        <label>Upload-image </label>
+                        <input type="file" id="image-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="topText">Top Text</label>
+                        <input type="text" id="topText" placeholder="TopSectionText">
+                    </div>
+                    <div class="form-group">
+                        <label for="bottomText">Bottom Text</label>
+                        <input type="text" id="bottomText" placeholder="BottomSectionText">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 ">
+
+
+                            <div class="form-group ">
+                                <label for="font-family-select">Font Family</label>
+                                <select id="font-family-select">
+                                    <option value="Arial, sans-serif">Arial</option>
+                                    <option value="Georgia, serif">Georgia</option>
+                                    <option value="Impact">Impact </option>
+                                    <option value="Courier New">Courier New</option>
+                                    <option value="Franklin Gothic Medium">Franklin Gothic Medium </option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 ">
+                            <div class="form-group ">
+                                <label for="font-size-range">Font Size</label>
+                                <input class="style-group" type="range" id="font-size-range" min="10" max="100"
+                                    value="16">
+
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 ">
+                            <div class="form-group ">
+                                <label for="font-color-input">Font Color</label>
+                                <input class="style-group" type="color" id="font-color-input" value="#ffffff">
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 ">
+                            <div class="form-group">
+                                <label for="">Stroke Line</label>
+                                <input type="checkbox" id="strokeCheckbox">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <!-- canvas element to be display -->
+            <div class="col-sm-12 col-md-6 col-lg-6 memecanva">
+                <canvas class="img-responsive" id="meme"></canvas>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Provide two option button share and download -->
+    <div class="container sdbtn">
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="button" class="btn btn-primary" id="shareBtn" onclick="shareImage()" value="Share">
+                <span>or</span>
+                <input type="button" class="btn btn-primary" id="downloadBtn" onclick="downloadImage()"
+                    value="Download">
+            </div>
+        </div>
+    </div>
+ 
+    <!-- integrating javascripts file   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="app.js">
+
+    </script>
+</body>
+
+</html>

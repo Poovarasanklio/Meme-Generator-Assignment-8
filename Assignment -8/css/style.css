@@ -1,0 +1,132 @@
+body {
+  background: whitesmoke;
+}
+
+/* styles for heading image*/
+.headimg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.headimg img {
+  border-radius: 10px;
+  height: 40px;
+  width: fit-content;
+
+}
+
+.headimg>:nth-child(2) {
+  margin-left: 20px;
+  border-radius: 15px;
+}
+
+/* styles for getting user input element */
+.uploadimage {
+  margin-top: 5%;
+}
+
+.image-upload-form {
+  background: #dbdfe0;
+  border-radius: 6px;
+  padding: 4px;
+  box-shadow: 2px 2px 3px 1px  #111a2ba6;
+}
+
+.image-upload-form div {
+  padding: 2px auto;
+}
+
+.image-upload-form label {
+  display: block;
+}
+
+.image-upload-form input {
+  height: 30px;
+  width: 90%;
+  border-radius: 3px;
+  padding: 5px;
+  border: 1px solid rgb(0, 0, 0, 0.4);
+
+}
+
+#font-color-input,
+#font-size-range {
+  padding: 0 3px;
+  width: 70px;
+}
+
+#font-family-select {
+  padding: 3px;
+  border-radius: 5px;
+  width: 70px;
+}
+
+#image-input {
+  height: 25px;
+  width: 195px;
+  margin: 10px auto 0 0;
+  outline: none;
+  border: none;
+}
+
+#strokeCheckbox {
+  height: 20px;
+  width: 20px;
+  
+}
+
+.memecanva{
+  padding: 3px;
+  border-radius: 6px;
+  box-shadow: 1.5px 1.5px 3px 1px  #5a5d63a6;
+ }
+/* Colors for download and share buttons  */
+#downloadBtn {
+  background-color: #0066CC;
+}
+
+#shareBtn {
+  background-color: #003399;
+}
+
+#downloadBtn:focus,
+#shareBtn:focus {
+  outline: none;
+
+}
+
+#downloadBtn:active,
+#shareBtn:active {
+  opacity: .5;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.sdbtn {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  text-align: center;
+
+}
+
+/* media query change height of title image  */
+@media(max-width:486px) {
+  .headimg img {
+    height: 26px;
+  }
+
+}
+
+@media(max-width:400px) {
+  .headimg img {
+    height: 21px;
+  }
+}
+
+@media(max-width:992px) {
+  .memecanva {
+    margin-top: 10px;
+  }
+}
